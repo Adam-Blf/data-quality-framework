@@ -1,0 +1,45 @@
+name: data-quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Weekly refresh, catches upstream schema drift even without a code change.
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: data-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: pytest tests/ -q
+
+      - name: Fetch source dataset
+        run: python scripts/fetch_data.py
+
+      - name: Run quality gate (Great Expectations + custom checks)
+        run: python scripts/build_and_run_suite.py
+
+      - name: Upload Data Docs (HTML report)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: data-docs-html
+          path: gx/uncommitted/data_docs/
+          retention-days: 30

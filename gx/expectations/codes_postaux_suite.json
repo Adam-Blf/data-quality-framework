@@ -1,0 +1,116 @@
+{
+  "expectations": [
+    {
+      "id": "5769e40b-3e24-4100-9fb5-94427c9510ef",
+      "kwargs": {
+        "column": "code_commune_insee"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "73deb05d-b992-4c54-b8b8-cefee00b6559",
+      "kwargs": {
+        "column": "nom_commune"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "b6de3ec3-cfad-47da-a94a-5c8a752c27d0",
+      "kwargs": {
+        "column": "code_postal"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "d905ebf8-de72-41ec-9248-dbbdfb71afb3",
+      "kwargs": {
+        "column": "libelle_acheminement"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "a94a2017-c518-4b05-85e6-fef5a09d5025",
+      "kwargs": {
+        "column_list": [
+          "code_commune_insee",
+          "nom_commune",
+          "code_postal",
+          "libelle_acheminement",
+          "ligne_5"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_compound_columns_to_be_unique"
+    },
+    {
+      "id": "db9ba649-acb0-4b2e-b4eb-3d8b83b7f565",
+      "kwargs": {
+        "column": "code_postal",
+        "regex": "^[0-9]{5}$"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "d7654803-8438-4513-9c04-12d965ef4c98",
+      "kwargs": {
+        "column": "code_commune_insee",
+        "regex": "^(2A|2B|[0-9]{2,3})[0-9A-Z]{2,3}$"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "c78e6a20-33a0-4c17-a902-09e9c20bc97c",
+      "kwargs": {
+        "column": "code_postal",
+        "value": 5.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_value_lengths_to_equal"
+    },
+    {
+      "id": "06f1a400-bd85-4c91-aad7-3d3baa768d01",
+      "kwargs": {
+        "column_set": [
+          "code_commune_insee",
+          "nom_commune",
+          "code_postal",
+          "libelle_acheminement",
+          "ligne_5"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_table_columns_to_match_set"
+    },
+    {
+      "id": "7274ff44-350b-49b4-ba36-6aa5a4ffa17c",
+      "kwargs": {
+        "max_value": 45000,
+        "min_value": 30000
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_table_row_count_to_be_between"
+    }
+  ],
+  "id": "353d361a-3b5e-4c99-8281-fe39f63b9826",
+  "meta": {
+    "great_expectations_version": "1.19.1"
+  },
+  "name": "codes_postaux_suite",
+  "notes": null
+}

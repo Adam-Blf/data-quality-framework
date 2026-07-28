@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "ea577903-85b1-46d9-b96a-155646e15149",
+      "name": "codes_postaux_asset"
+    },
+    "batch_definition": {
+      "id": "6763dfb5-3951-4cac-ac3d-e4bed23c71d5",
+      "name": "codes_postaux_full_table"
+    },
+    "datasource": {
+      "id": "ccad85ee-6dc3-442f-b586-09c14e55b5b6",
+      "name": "codes_postaux_source"
+    }
+  },
+  "id": "161bc895-5978-4c6b-995c-ad2cfd7c4a3b",
+  "name": "codes_postaux_suite",
+  "suite": {
+    "id": "353d361a-3b5e-4c99-8281-fe39f63b9826",
+    "name": "codes_postaux_suite"
+  }
+}

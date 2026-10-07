@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.0] - 2026-10-07
+
+First tagged release. Latest changes:
+
+- docs: add colors to mermaid diagrams (#2)
+- add Great Expectations quality framework on French open data (#1)
+- chore: init empty repository
+
 ## 0.1.0 - 2026-07-28
 
 - Initial release: Great Expectations suite on the official French postal

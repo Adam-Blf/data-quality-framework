@@ -6,6 +6,7 @@
 [![last commit](https://img.shields.io/github/last-commit/Adam-Blf/data-quality-framework?color=D4A437&style=flat-square&label=dernier%20push)](https://github.com/Adam-Blf/data-quality-framework/commits)
 [![top language](https://img.shields.io/github/languages/top/Adam-Blf/data-quality-framework?style=flat-square)](https://github.com/Adam-Blf/data-quality-framework)
 [![license](https://img.shields.io/github/license/Adam-Blf/data-quality-framework?style=flat-square&color=D4A437)](LICENSE)
+[![version](https://img.shields.io/badge/version-0.1.0-D4A437?style=flat-square)](CHANGELOG.md)
 <!-- adam-badges:end -->
 
 Framework de qualite de donnees pret pour la production - Great Expectations,
